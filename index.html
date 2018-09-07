@@ -1,7 +1,7 @@
-<script src="vendor/aframe.min.js"></script>
+<script src="vendor/aframe-master.min.js"></script>
 <head>
-                <link rel="manifest" href="manifest.json">
-                <noscript>Put Sample code here for execution when JavaScript is Disabled</noscript>
+        <!-- <link rel="manifest" href="manifest.json"> -->
+        <noscript>This page requires to have javascript enabled. Please enable javascript</noscript>
 </head>
 <body>
 <a-scene>
@@ -13,15 +13,15 @@
 </a-scene>
 <script>
 
-var serviceWorkerIsSupported = 'serviceWorker' in navigator ? true : false
-// Check that service workers are registered
-if ( serviceWorkerIsSupported ) {
-        // Use the window load event to keep the page load performant
-        window.addEventListener('load', function(){
-                // register your service worker
-                navigator.serviceWorker.register('sw.js');
-        });
-}
+// var serviceWorkerIsSupported = 'serviceWorker' in navigator ? true : false
+// // Check that service workers are registered
+// if ( serviceWorkerIsSupported ) {
+//         // Use the window load event to keep the page load performant
+//         window.addEventListener('load', function(){
+//                 // register your service worker
+//                 navigator.serviceWorker.register('sw.js');
+//         });
+// }
 </script>
 
 </body>
