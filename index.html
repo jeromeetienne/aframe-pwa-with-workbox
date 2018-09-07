@@ -21,6 +21,8 @@ if ( serviceWorkerIsSupported ) {
         window.addEventListener('load', function(){
                 // register your service worker
                 navigator.serviceWorker.register('sw.js');
+                // to use the precaching version
+                // navigator.serviceWorker.register('sw-precaching.js');
         });
 }
 </script>
