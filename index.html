@@ -1,6 +1,6 @@
 <script src="vendor/aframe-master.min.js"></script>
 <head>
-        <!-- <link rel="manifest" href="manifest.json"> -->
+        <link rel="manifest" href="manifest.json">
         <noscript>This page requires to have javascript enabled. Please enable javascript</noscript>
 </head>
 <body>
@@ -11,17 +11,18 @@
         <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
         <a-sky color="#ECECEC"></a-sky>
 </a-scene>
-<script>
 
-// var serviceWorkerIsSupported = 'serviceWorker' in navigator ? true : false
-// // Check that service workers are registered
-// if ( serviceWorkerIsSupported ) {
-//         // Use the window load event to keep the page load performant
-//         window.addEventListener('load', function(){
-//                 // register your service worker
-//                 navigator.serviceWorker.register('sw.js');
-//         });
-// }
+·<script>
+
+var serviceWorkerIsSupported = 'serviceWorker' in navigator ? true : false
+// Check that service workers are registered
+if ( serviceWorkerIsSupported ) {
+        // Use the window load event to keep the page load performant
+        window.addEventListener('load', function(){
+                // register your service worker
+                navigator.serviceWorker.register('sw.js');
+        });
+}
 </script>
 
 </body>
