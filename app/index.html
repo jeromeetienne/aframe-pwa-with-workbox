@@ -1,4 +1,8 @@
 <script src="vendor/aframe.min.js"></script>
+<head>
+                <link rel="manifest" href="/manifest.json">
+                <noscript>Put Sample code here for execution when JavaScript is Disabled</noscript>
+</head>
 <body>
 <a-scene>
         <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
@@ -14,7 +18,8 @@ var serviceWorkerIsSupported = 'serviceWorker' in navigator ? true : false
 if ( serviceWorkerIsSupported ) {
         // Use the window load event to keep the page load performant
         window.addEventListener('load', function(){
-                navigator.serviceWorker.register('/sw.js');
+                // register your service worker
+                navigator.serviceWorker.register('sw.js');
         });
 }
 </script>

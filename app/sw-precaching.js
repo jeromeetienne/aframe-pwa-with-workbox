@@ -20,26 +20,36 @@ workbox.core.setLogLevel(workbox.core.LOG_LEVELS.debug)
 //////////////////////////////////////////////////////////////////////////////
 //		register some routes
 //////////////////////////////////////////////////////////////////////////////
-// workbox.routing.registerRoute(
-// 	new RegExp('.*\.js'),
-// 	workbox.strategies.cacheFirst()
-// )
-// 
+workbox.routing.registerRoute(
+	new RegExp('.*\.js'),
+	workbox.strategies.cacheFirst()
+)
+
 workbox.routing.registerRoute(
 	new RegExp('index.html'),
 	workbox.strategies.cacheFirst()
 )
 
-workbox.routing.registerRoute(
-	new RegExp('/'),
-	workbox.strategies.cacheFirst()
-)
-// 
-// // TODO register / for index.html
-// 
-// //////////////////////////////////////////////////////////////////////////////
-// //		precache and route
-// //////////////////////////////////////////////////////////////////////////////
-// 
-// // TO BE FILLED BY ``````
-// workbox.precaching.precacheAndRoute([])
+
+// TODO register / for index.html
+// - is this needed ?
+
+//////////////////////////////////////////////////////////////////////////////
+//		precache and route
+//////////////////////////////////////////////////////////////////////////////
+
+// TO BE FILLED BY ``````
+workbox.precaching.precacheAndRoute([
+  {
+    "url": "index.html",
+    "revision": "cc28257303356890e7011a6a28167324"
+  },
+  {
+    "url": "sw.js",
+    "revision": "d4b9dddffb8524988be9fc3e44af1c65"
+  },
+  {
+    "url": "vendor/aframe.min.js",
+    "revision": "50610178305c4ae36dce20d74d7dd06c"
+  }
+])
